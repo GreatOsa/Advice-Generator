@@ -21,13 +21,13 @@ This is a solution to the [Advice generator app challenge on Frontend Mentor](ht
 Users should be able to:
 
 - View the optimal layout for the app depending on their device's screen size
-- See hover states for all interactive elements on the page
+- See hover states for the button
 - Generate a new piece of advice by clicking the dice icon
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Add solution URL here](https://github.com/GreatOsa/Advice-Generator)
+- Live Site URL: [Add live site URL here](https://greatosa.github.io/Advice-Generator/)
 
 ## My process
 
@@ -41,9 +41,13 @@ Users should be able to:
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+I plan to focus on improving the loading process by implementing:
 
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+- Better loading state indicators
+- Smoother transitions between advice updates
+- Error handling for failed API requests
+- Optimized performance for faster response times
+- Accessibility considerations during loading states
 
 ## Author
 

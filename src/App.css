@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.stack {
+  display: r;
+  /* padding: 1.5rem; */
+}
+
+.container {
+  background-color: hsl(217, 19%, 24%);
+  border-radius: 10px;
+  text-align: center;
+  padding: 3rem;
+  padding-bottom: 4rem;
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.adviceTitle {
+  color: hsl(150, 100%, 66%);
+  font-size: 0.7rem;
+  letter-spacing: 0.2rem;
+}
+
+.advice {
+  color: hsl(193, 38%, 86%);
+  font-size: 1.4rem;
+  font-weight: 700;
+  /* margin-top: 1rem; */
+}
+
+.mobileDivider,
+.desktopDivider {
+  width: 100%;
+}
+
+.dice {
+  /* border-radius: 50px; */
+
+  padding: 0.8rem;
+}
+
+.diceContainer {
+  background-color: hsl(150, 100%, 66%);
+  border: none;
+  width: fit-content;
+  height: fit-content;
+  border-radius: 50px;
+  display: flex;
+
+
+}
+
+.rowCenter {
+  /* display: flex;
+  justify-content: center; */
+  position: absolute;
+  /* position: fixed; */
+  left: 50%;
+  bottom: 0%;
+  transform: translate(-50%, 50%);
+  /* Centering the div */
+  margin: 0 auto;
+
+
+}
+
+@media (max-width: 768px) {
+
+  /* Mobile styles */
+  .App {
+    /* height: 100vh; */
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+
+  .container {
+    width: 95%;
+    height: fit-content;
+    margin-top: 30%;
+
+  }
+
+  .desktopDivider {
+    display: none;
+  }
+
+}
+
+/* desktop mode */
+
+@media (min-width: 768px) {
+  .App {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+
+  .container {
+    width: 40%;
+    /* height: 40%; */
+    height: fit-content;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+
+  .mobileDivider {
+    display: none;
+  }
+
+  .desktopDivider {
+    display: block;
+  }
+}

@@ -9,18 +9,42 @@ const URL = "https://api.adviceslip.com/advice";
 export default function App() {
   const [advice, setAdvice] = useState("");
   const [id, setId] = useState("");
+  // const [loading, setLoading] = useState(false);
+  // const [error, setError] = useState(null);
 
+  const fetchData = async () => {
+    const result = await fetch(URL);
+
+    result.json().then((json) => {
+      setAdvice(json.slip.advice);
+      setId(json.slip.id);
+    });
+  };
   useEffect(() => {
-    const fetchData = async () => {
-      const result = await fetch(URL);
-
-      result.json().then((json) => {
-        setAdvice(json.slip.advice);
-        setId(json.slip.id);
-      });
-    };
     fetchData();
   }, []);
+
+  // const fetchAdvice = async () => {
+  //   setLoading(true);
+  //   // setError(null);
+  //   try {
+  //     const response = await fetch(URL);
+  //     if (!response.ok) {
+  //       throw new Error("Network response was not ok");
+  //     }
+  //     // const result = await response.json();
+  //     const result = await fetch(URL);
+  //     result.json().then((json) => {
+  //       setAdvice(json.slip.advice);
+  //       setId(json.slip.id);
+  //     });
+  //   } catch (error) {
+  //     setError(error.message);
+  //   } finally {
+  //     setLoading(false);
+  //   }
+  // };
+
   return (
     <div className="App">
       {/* <div className="stack"> */}
@@ -32,7 +56,10 @@ export default function App() {
         <img src={desktopDivider} alt="divider" className="desktopDivider" />
 
         <div className="rowCenter">
-          <button className="diceContainer">
+          <button
+            className="diceContainer shadow__btn"
+            onClick={() => fetchData()}
+          >
             <img src={dice} alt="dice" className="dice" />
           </button>
         </div>
